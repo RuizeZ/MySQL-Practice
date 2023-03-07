@@ -1,0 +1,12 @@
+CREATE TABLE cats3 
+(
+	name VARCHAR(100) DEFAULT 'NONAME',
+    age INT DEFAULT 999
+);
+
+DESC cats3;
+
+INSERT INTO cats3 (name)
+VALUES('ZEZE');
+
+SELECT * FROM cats3;
