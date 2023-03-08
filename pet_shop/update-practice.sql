@@ -1,0 +1,15 @@
+SHOW TABLES;
+UPDATE cats SET name = 'Jack' WHERE name = 'Jackson';
+SELECT * FROM cats;
+UPDATE cats SET breed = 'British Shorthair' WHERE name = 'Ringo';
+SELECT * FROM cats;
+UPDATE cats SET age = 12 WHERE breed = 'Maine Coon';
+SELECT * FROM cats;
+DELETE FROM cats WHERE name = 'Egg';
+SELECT * FROM cats;
+DELETE FROM cats WHERE age = 4;
+SELECT * FROM cats;
+DELETE FROM cats WHERE age = cat_id;
+SELECT * FROM cats;
+DELETE FROM cats;
+SELECT * FROM cats;
