@@ -114,3 +114,4 @@
 -- SELECT UPPER(CONCAT('my favorite author is ', author_lname, '!')) AS yell FROM books ORDER BY author_lname;
 -- SELECT COUNT(*) FROM books;
 -- SELECT COUNT(DISTINCT author_fname) FROM books;
+-- SELECT date_add('2023-2-12', INTERVAL 90 DAY);  
