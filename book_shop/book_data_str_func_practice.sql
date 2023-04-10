@@ -115,3 +115,18 @@
 -- SELECT COUNT(*) FROM books;
 -- SELECT COUNT(DISTINCT author_fname) FROM books;
 -- SELECT date_add('2023-2-12', INTERVAL 90 DAY);  
+SELECT * FROM books WHERE released_year = 2017;
+SELECT * FROM books WHERE released_year != 2017;
+SELECT title FROM books WHERE title NOT LIKE '% %';
+SELECT title, author_fname, author_lname FROM books WHERE author_fname NOT LIKE 'da%';
+SELECT title FROM books WHERE title NOT LIKE  '%e%';
+SELECT title, pages FROM books WHERE char_length(title) > 30 and pages > 400;
+SELECT title, released_year FROM bookspeoplebooksemployeestweetstweetstweets WHERE released_year BETWEEN 2004 AND 2015;
+SELECT * FROM tweets;
+SELECT * FROM tweets where YEAR(time_created) > 2022;
+SELECT title, released_year,
+CASE
+	WHEN released_year >= 2000 THEN 'modern lit'
+    ELSE '20th century lit'
+END AS type
+FROM books;
