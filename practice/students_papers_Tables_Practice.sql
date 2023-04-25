@@ -32,8 +32,8 @@ ORDER BY average DESC;
 
 SELECT first_name, ifnull(avg(grade), 0) as average, 
 case 
-	when average >= 75 then passing_status = "PASSING"
-	ELSE passing_status = "FAILING"
+	when ifnull(avg(grade), 0) >= 75 then "PASSING"
+	ELSE "FAILING"
 END as passing_status from students
 left JOIN papers ON students.id = papers.student_id group by first_name
 ORDER BY average DESC;
